@@ -3,5 +3,7 @@
 @tailwind utilities;
 @layer components {
     .azulInput {
-       @apply bg-azulOscuro opacity-50;
-     }}
+       @apply bg-azulOscuro opacity-80;
+     }
+  
+    }

@@ -3,9 +3,10 @@ import useCheckAuth from "../hooks/useCheckAuth";
 
 export default function PrivateRoute() {
 
-    const { userAuth, loading } = useCheckAuth()
+    let { userAuth, loading } = useCheckAuth()
 
     if (loading) {
+     
         return (
             <>
             </>
@@ -15,6 +16,7 @@ export default function PrivateRoute() {
 
     if (userAuth) {
         return (
+            
             <Outlet />
         )
     }
@@ -24,3 +26,4 @@ export default function PrivateRoute() {
     )
 
 }
+

@@ -1,0 +1,19 @@
+.MyLink:after{
+
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.6s;
+  }
+  .MyLink:hover{
+    color: #ffffff;
+  }
+  .MyLink:hover:after {
+      
+    width: 100%;
+  
+    }

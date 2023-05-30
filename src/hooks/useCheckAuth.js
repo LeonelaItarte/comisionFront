@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 
 export default function useCheckAuth(){
-
-    const [userAuth, setUserAuth] = useState(false)
-    const [loading, setLoading] = useState(true)
+    
+    const [userAuth, setUserAuth] = useState(false);
+    const [loading, setLoading] = useState(true);
+    
     
     useEffect(() => {
+       
         async function checkAuth() {
             try {
-                if(true){
+                if(sessionStorage.getItem('token')){
                     setUserAuth(true)
+                    
                     return
                 }
             } catch (e) {
@@ -21,6 +24,7 @@ export default function useCheckAuth(){
 
         }
         checkAuth();
+        
     }, [])
 
 
